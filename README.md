@@ -43,3 +43,8 @@ Full list of [field lookups](https://docs.djangoproject.com/en/2.1/ref/models/qu
 
 [The Django admin site](https://docs.djangoproject.com/en/2.1/ref/contrib/admin/)  
 
+
+### [Part 5: Home page](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page)
+
+[Template](https://docs.djangoproject.com/en/2.1/topics/templates/)
+[Managing static files](https://docs.djangoproject.com/en/2.1/howto/static-files/)
