@@ -13,11 +13,17 @@ admin.site.register(Genre)
 admin.site.register(Language)
 
 
+
+class BookInline(admin.TabularInline):
+    model = Book
+
+
 # Define the admin class
 class AuthorAdmin(admin.ModelAdmin):
     list_display = ('last_name', 'first_name', 'date_of_birth', 'date_of_death')
     # fields define the layout of the fields.
     fields = ['first_name', 'last_name', ('date_of_birth', 'date_of_death')]
+    inlines = [BookInline]
 
 # Register the admin class with the associated model
 admin.site.register(Author, AuthorAdmin)
@@ -43,6 +49,7 @@ class BookAdmin(admin.ModelAdmin):
 class BookInstanceAdmin(admin.ModelAdmin):
     # filters for the use to select data to display
     list_filter = ('status', 'due_back')
+    list_display = ('book', 'status', 'due_back', 'id')
 
     # add sections to group related information. (Section titles are None and Availability)
     fieldsets = (
