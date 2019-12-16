@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.shortcuts import HttpResponse
+from django.shortcuts import get_object_or_404
+
 
 # Create your views here.
 
@@ -38,3 +40,35 @@ def index(request):
 
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html', context=context)
+
+
+from django.views import generic
+
+class BookListView(generic.ListView):
+    '''
+    By default, the ListView class will use theModelName_list.html as template, e.g. book_list.html. This can be changed
+    by setting the 'template_name' variable. e.g template_name = 'books/my_template_name_list.html'.
+
+    the ListView class passes the context as 'book_list' and 'object_list'.
+
+    '''
+
+    model = Book
+
+    # override the get_queryset() method to change the list of the records returned
+    def get_queryset(self):
+        return Book.objects.filter(title__startswith='B')[:5]  # Get 5 books containing the title war
+
+
+class BookDetailView(generic.DetailView):
+    '''
+    By default, the DetailView class will user theModelName_detail.html, e.g. book_detail.html.
+
+    the DetailView class passes the context as 'book' AND/OR 'object'.
+    '''
+    model = Book
+
+    def book_detail_view(request, primary_key):
+        book = get_object_or_404(Book, pk=primary_key)
+        return render(request, 'catalog/book_detail.html', context={'book': book})
+

@@ -46,5 +46,16 @@ Full list of [field lookups](https://docs.djangoproject.com/en/2.1/ref/models/qu
 
 ### [Part 5: Home page](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Home_page)
 
-[Template](https://docs.djangoproject.com/en/2.1/topics/templates/)
+[Template](https://docs.djangoproject.com/en/2.1/topics/templates/)  
 [Managing static files](https://docs.djangoproject.com/en/2.1/howto/static-files/)
+
+
+### [Part 6: Generic list and detail views](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Generic_views)
+
+[Built-in class-based generic views](https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-display/)  
+[Built-in template tags and filters](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#)  
+[Regular Expression](https://docs.python.org/3/library/re.html)  
+[Passing extra options to view functions](https://docs.djangoproject.com/en/2.1/topics/http/urls/#views-extra-options)
+
+
+
