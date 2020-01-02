@@ -55,7 +55,7 @@ Full list of [field lookups](https://docs.djangoproject.com/en/2.1/ref/models/qu
 [Built-in class-based generic views](https://docs.djangoproject.com/en/2.1/topics/class-based-views/generic-display/)  
 [Built-in template tags and filters](https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#)  
 [Regular Expression](https://docs.python.org/3/library/re.html)  
-[Passing extra options to view functions](https://docs.djangoproject.com/en/2.1/topics/http/urls/#views-extra-options)
-
+[Passing extra options to view functions](https://docs.djangoproject.com/en/2.1/topics/http/urls/#views-extra-options)  
+[Paginator object](https://docs.djangoproject.com/en/2.1/topics/pagination/#paginator-objects)  
 
 
