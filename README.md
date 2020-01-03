@@ -59,3 +59,6 @@ Full list of [field lookups](https://docs.djangoproject.com/en/2.1/ref/models/qu
 [Paginator object](https://docs.djangoproject.com/en/2.1/topics/pagination/#paginator-objects)  
 
 
+### [Part 7: Sessions framework](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Sessions)  
+How to use [sessions](https://docs.djangoproject.com/en/2.1/topics/http/sessions/)  
+

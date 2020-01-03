@@ -29,6 +29,14 @@ def index(request):
     num_books_startswithB = Book.objects.filter(title__startswith='B').count()
     num_geners = Genre.objects.all().count()
 
+    # Number of visits to this view, as counted in the session variable.
+    num_visits = request.session.get('num_visits', 0)  # get the 'num_visits' value, if none assign 0
+    request.session['num_visits'] = num_visits + 1
+
+    # The session data will be saved automatically. However, when modified indirectly you have to force it to save
+    ## Set session as modified to force data updates/cookie to be saved.
+    #request.session.modified = True
+
     context = {
         'num_books': num_books,
         'num_instances': num_instances,
@@ -36,6 +44,7 @@ def index(request):
         'num_authors': num_authors,
         'num_books_startswithB': num_books_startswithB,
         'num_geners': num_geners,
+        'num_visits': num_visits,
     }
 
     # Render the HTML template index.html with the data in the context variable

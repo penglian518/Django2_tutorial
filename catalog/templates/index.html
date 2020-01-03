@@ -17,4 +17,6 @@
     <li><strong>Books startswith B</strong> {{ num_books_startswithB }}</li>
     <li><strong>Geners:</strong> {{ num_geners }}</li>
   </ul>
+
+  <p>You have visited this page {{ num_visits }}{% if num_visits == 1 %} time{% else %} times{% endif %}.</p>
 {% endblock %}
